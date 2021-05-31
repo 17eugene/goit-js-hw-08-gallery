@@ -43,12 +43,11 @@ function onGallery(event) {
     event.preventDefault();
     if (event.target.nodeName !== 'IMG') {
         return;
-    }
-    if (event.target.nodeName === 'IMG') {
-        lightbox.classList.add('is-open');
-        lightboxImage.src = event.target.dataset.source;
-        lightboxImage.alt = event.target.alt;
-    }
+    };
+    lightbox.classList.add('is-open');
+    lightboxImage.src = event.target.dataset.source;
+    lightboxImage.alt = event.target.alt;
+
     window.addEventListener('keyup', onKeyClose)
     window.addEventListener('keydown', leafOverByArrows)
 };
